@@ -1,0 +1,427 @@
+.asx.loading {
+    background: url("../images/ajax-loader.gif") no-repeat center;
+    min-height: 200px;
+}
+
+.asx.loading .purpose.learnbydoing .actContain,
+.asx.loading .purpose.didigetthis .actContain {
+    background-image: url("../images/ajax-loader.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 200px;
+}
+
+.asx.loading .purpose.learnbydoing .actContain {
+    background-color: #E2F2FC;
+}
+
+.asx.loading .purpose.didigetthis .actContain {
+    background-color: #F1F6DD;
+}
+
+.asx .page {
+    opacity: 1;
+}
+
+.asx .page p.hide {
+    display: none;
+}
+
+.asx .page .question {
+    border-bottom: 1px dashed #CCC;
+    padding: 10px 0px 10px 0px;
+    margin: 10px 0px;
+}
+
+.asx .feedback,
+.asx .hintContainer {
+    border: solid 2px;
+    border-color: #73716e;
+    background: #F2F2F2;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    padding: 4px 7px 4px 7px;
+    margin-top: 5px;
+    margin: 5px 24px 0px 0px;
+    line-height: 1.1em;
+    width: 97%;
+    position: relative;
+    -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+    -moz-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.35);
+    text-shadow: 0px -1px 2px #dfdfdf;
+    line-height: 1.4em;
+    min-height: 20px;
+}
+
+.asx .qDropDown .hintSlide,
+.asx .qDropDown .hint {
+    width: auto;
+}
+
+.asx .feedback.correct {
+    background: #ddffdd;
+    border-color: #33aa33;
+}
+
+.asx .feedback.incorrect {
+    background: #f4cfc9;
+    border-color: #e75d36;
+}
+
+.asx .correctPrimary select {
+    background: #ddffdd;
+}
+
+.asx select.highlight {
+    background: #fde9a2 !important;
+}
+
+.asx .incorrectPrimary select {
+    background: #f4cfc9;
+}
+
+.asx .feedback .icon {
+    display: block;
+    float: left;
+    position: absolute;
+    top: 50%;
+    margin-top: -7px;
+}
+
+.asx .feedback.correct .icon {
+    width: 16px;
+    height: 14px;
+    background: url("../images/asSprite.png") no-repeat;
+    background-position: -18px 0px;
+}
+
+.asx .feedback.incorrect .icon {
+    width: 12px;
+    height: 14px;
+    background: url("../images/asSprite.png") no-repeat;
+    background-position: -34px 0px;
+}
+
+.asx .feedback .response {
+    padding: 0px 10px 0px 20px;
+}
+
+.asx .hintContainer {
+    background: #fde9a2;
+    border-color: #73716e;
+    display: none;
+    overflow: hidden;
+    min-height: 32px;
+}
+
+.asx .hintContainer.true {
+    display: block;
+}
+
+.asx .hintContainer .prev {
+    display: none;
+    position: absolute;
+    top: 31%;
+    left: 15px;
+    background: url("../images/css/asSprite.png") no-repeat -8px -14px;
+    text-indent: -9999px;
+    height: 15px;
+    width: 10px;
+}
+
+.asx .hintContainer .next {
+    display: block;
+    position: absolute;
+    top: 31%;
+    right: 15px;
+    background: url("../images/css/asSprite.png") no-repeat -8px 0px;
+    text-indent: -9999px;
+    height: 15px;
+    width: 10px;
+}
+
+.asx .hintSlide,
+.asx .hintContainer.qDropDown .hintSlide {
+    width: 9999px;
+    position: relative;
+}
+
+.asx .hintHat {
+    display: inline-block;
+    text-decoration: none;
+    overflow: hidden;
+    text-indent: -9999px;
+    width: 30px;
+    height: 17px;
+    margin: 0px 0px 0px 6px;
+    background: url("../images/asSprite.png") no-repeat -46px -19px;
+}
+
+.asx .hint {
+    display: block;
+    /*width: 680px; Changed due to width issue when you would refresh page and have hint already displayed*/
+    width: 604px;
+    float: left;
+    padding: 0px 35px;
+}
+
+.asx .hint:first-child {
+    padding: 6px 70px 0px 0px;
+}
+
+.asx .xBtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5px;
+    padding: 0px;
+    height: 8px;
+    width: 8px;
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    cursor: pointer;
+    background: url("../images/asSprite.png") no-repeat 0px 0px;
+}
+
+.asx .pageControls {
+    margin-right: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    position: relative;
+    min-height: 15px;
+}
+
+.asx .pageControls input {
+    border-style: none;
+    background: #FFF;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: normal !important;
+    margin-left: 3px;
+    padding: 3px 6px;
+    text-align: center;
+    vertical-align: top;
+    white-space: nowrap;
+    text-transform: uppercase;
+    color: #3b7cad;
+    font-weight: bold;
+}
+
+.asx .pageControls input.btnNext.proceed {
+    background-image: url("../images/css/button.png");
+    background-position: 0 -48px;
+    color: #FFF;
+    -webkit-animation-name: bluePulse;
+    -webkit-animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes bluePulse {
+    from {
+        background-color: #027099;
+        -webkit-box-shadow: 0 0 9px #e3f8ff;
+    }
+    50% {
+        background-color: #098dbd;
+        -webkit-box-shadow: 0 0 18px #098dbd;
+    }
+    to {
+        background-color: #029982;
+        -webkit-box-shadow: 0 0 9px #e3f8ff;
+    }
+}
+
+.asx textarea {
+    display: block;
+    margin: 0px 0px 5px 0px;
+}
+
+.asx textarea.small {
+    width: 50%;
+    height: 45px;
+}
+
+.asx textarea.medium {
+    width: 70%;
+    height: 65px;
+}
+
+.asx textarea.large {
+    width: 100%;
+    height: 95px;
+}
+
+.asx input[type=text].small {
+    width: 30%;
+}
+
+.asx input[type=text].medium {
+    width: 50%;
+}
+
+.asx input[type=text].large {
+    width: 70%;
+}
+
+.asx .component .loading {
+    background: url("../images/ajax-loader.gif") no-repeat right;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    background-size: 100%;
+    position: absolute;
+    margin: 2px 0px 0px 6px;
+    text-indent: -9999px;
+}
+
+.asx .component.highlight select {
+    background: #fde9a2;
+}
+
+.asx .component .radioContainer,
+.asx .component .checkboxContainer {
+    margin: 0px 5px 0px 0px;
+}
+
+.asx .component .radioContainer.word:after,
+.asx .component .checkboxContainer.word:after {
+    content: inherit;
+    display: inherit;
+    clear: inherit;
+    margin-bottom: inherit !important;
+}
+
+.asx .component .radioContainer:after,
+.asx .component .checkboxContainer:after {
+    content: "";
+    display: table;
+    clear: both;
+    margin-bottom: 5px;
+}
+
+.asx .component .radioContainer label,
+.asx .component .checkboxContainer label {
+    padding: 0px 10px 0px 4px;
+}
+
+.asx .component .radioContainer label,
+.asx .component .checkboxContainer table {
+    display: block;
+    float: left;
+    width: 90%;
+}
+
+.asx .component .radioContainer input[type="radio"],
+.asx .component .checkboxContainer table input[type="radio"] {
+    display: block;
+    float: left;
+    margin: 5px 10px 0px 0px;
+}
+
+.asx .component.highlight .radioContainer,
+.asx .component.highlight .checkboxContainer {
+    background: #fde9a2;
+}
+
+.asx .component.highlight input[type=text],
+.asx .component.highlight textarea {
+    background: #fde9a2;
+    border: 1px solid #CCC;
+}
+
+.asx .component .radioContainer.word,
+.asx .component .checkboxContainer.word {
+    margin: 0px;
+    display: inline-block !important;
+    float: none !important;
+}
+
+.asx .component .radioContainer.word input,
+.asx .component .checkboxContainer.word input {
+    display: none;
+}
+
+.asx .component .radioContainer.word label.correctPrimary,
+.asx .component .checkboxContainer.word label.correctPrimary,
+.asx .component .radioContainer.word label:hover,
+.asx .component .checkboxContainer.word label:hover {
+    background-color: #E2F2FC;
+}
+
+.asx .component .radioContainer.word label,
+.asx .component .checkboxContainer.word label {
+    font-weight: bold;
+    padding: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    display: inline-block;
+    width: inherit !important;
+}
+
+.asx .component .radioContainer.word.noselect label,
+.asx .component .checkboxContainer.word.noselect label {
+    font-weight: bold;
+    cursor: auto;
+}
+
+.asx .component .radioContainer.word.noselect label:hover,
+.asx .component .checkboxContainer.word.noselect label:hover {
+    background-color: transparent;
+}
+
+.asx .component .radioContainer.word label.correctPrimary,
+.asx .component .checkboxContainer.word label.active {
+    background-color: #E2F2FC;
+}
+
+.asx .component .radioContainer.word label.incorrectPrimary,
+.asx .component .checkboxContainer.word label.incorrectPrimary.active {
+    background-color: #f4cfc9;
+}
+
+.btnReset {
+    cursor: pointer;
+    position: absolute;
+    display: block;
+    right: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.asx .btnPage {
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+    text-indent: -9999px;
+    background: url("../images/css/pagestatus.png") no-repeat;
+    height: 17px;
+    width: 16px;
+    margin: 6px 5px 0px 5px;
+    position: relative;
+}
+
+.asx .btnPage.FINISHED {
+    background-position: 0px -32px;
+}
+
+.asx .btnPage.STARTED {
+    background-position: 0px -16px;
+}
+
+.asx .btnPage.NOT_STARTED {
+    background-position: 0px 0px;
+}
+
+.asx .btnPage.current span {
+    width: 14px;
+    height: 14px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    position: absolute;
+    right: -1px;
+    top: 0px;
+    border: 2px solid #33d6ff;
+}

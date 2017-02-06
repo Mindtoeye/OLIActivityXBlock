@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE workbook_page PUBLIC "-//Carnegie Mellon University//DTD Workbook Page 3.8//EN" "http://oli.web.cmu.edu/dtd/oli_workbook_page_3_8.dtd">
+<?xml-stylesheet type="text/css" href="http://oli.web.cmu.edu/authoring/oxy-author/oli_workbook_page_3_7.css"?>
+<workbook_page id="test02k_adobe_captivate_activity_workbook">
+    <head>
+        <title>Test 02k - Adobe Captivate Activity</title>
+    </head>
+    <body>
+        <section>
+            <title>Test 02k - Adobe Captivate Activity</title>
+            <body>				
+                <wb:inline idref="test02k_adobe_captivate_activity" purpose="learnbydoing"/>
+            </body>
+        </section>
+    </body>
+</workbook_page>

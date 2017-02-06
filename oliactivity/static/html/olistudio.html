@@ -1,0 +1,51 @@
+<div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
+  <ul class="list-input settings-list">
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="interface">OLI Activity Description</label>
+        <input class="input setting-input" name="interface" id="interface" value="{activityxml}" type="text" />
+      </div>
+      <span class="tip setting-help">A URL to the OLI activity xml: public/content/x-oli-embed-activity/test02k_adobe_captivate_activity.xml</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="brd">OLI Workbook page</label>
+        <input class="input setting-input" name="brd" id="brd" value="{workbookxml}" type="text" />
+      </div>
+      <span class="tip setting-help">A URL to an OLI workbook page: public/content/x-oli-workbook_page/test02k_adobe_captivate_activity_workbook.xml</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="maxwidth">Max Width</label>
+        <input class="input setting-input" name="maxwidth" id="maxwidth" value="{width}" type="text" />
+      </div>
+      <span class="tip setting-help">Maximum width of the activity in pixels. Default is 690.</span>
+    </li>
+    <li class="field comp-setting-entry is-set">
+      <div class="wrapper-comp-setting">
+        <label class="label setting-label" for="maxheight">Max Height</label>
+        <input class="input setting-input" name="maxheight" id="maxheight" value="{height}" type="text" />
+      </div>
+      <span class="tip setting-help">Maximum height of the activity in pixels. Default is 550.</span>
+    </li>
+
+    <li class="field comp-setting-entry is-set">
+    <div class="wrapper-comp-setting">
+      <label class="label setting-label" for="logging">Enable Logging</label>
+      <input class="input setting-input" style="width:20px;height:20px;" name="logging" id="logging" type="checkbox" {logging}></input>
+    </div>
+    <span class="tip setting-help">Enable logging to the server.</span>
+    </li>
+  </ul>
+
+  <div class="xblock-actions">
+    <ul>
+      <li class="action-item">
+        <a href="#" class="button action-primary save-button">Save</a>
+      </li>
+      <li class="action-item">
+        <a href="#" class="button cancel-button">Cancel</a>
+      </li>
+    </ul>
+  </div>
+</div>

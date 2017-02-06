@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE embed_activity PUBLIC "-//Carnegie Mellon University//DTD Embed 1.1//EN" "http://oli.cmu.edu/dtd/oli-embed-activity_1.0.dtd">
+<embed_activity id="test02k_adobe_captivate_activity" width="670" height="700" >
+    <title>Test 02k - Adobe Captivate Activity</title>
+    <source>webcontent/api/oli.js</source>
+    <assets>
+		<asset name="basepath">webcontent/captivate</asset>
+		<asset name="javascript">webcontent/captivate/captivate.js</asset>
+		<asset name="layout">webcontent/captivate/index.html</asset>
+    </assets>
+</embed_activity>

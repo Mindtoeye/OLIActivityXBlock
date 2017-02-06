@@ -1,0 +1,26 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT embed_activity (title,source,assets*)>
+<!ATTLIST embed_activity
+  xmlns CDATA #FIXED ''
+  id NMTOKEN #REQUIRED
+  width CDATA #IMPLIED
+  height CDATA #IMPLIED
+  max_attempts CDATA #IMPLIED>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT source (#PCDATA)>
+<!ATTLIST source
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT assets (asset+)>
+<!ATTLIST assets
+  xmlns CDATA #FIXED ''>
+  
+ <!ELEMENT asset (#PCDATA)>
+<!ATTLIST asset
+  xmlns CDATA #FIXED ''
+  name CDATA #REQUIRED>
