@@ -22,7 +22,7 @@ def package_data(pkg, roots):
 
 setup(
     name='oliactivity-xblock',
-    version='0.118',
+    version='0.20',
     description='OLI Activity XBlock',
     packages=[
         'oliactivity',

@@ -13,7 +13,7 @@
                 <asset name="data">webcontent/tutorgen/skill-experimvsobs-experi_vs_obstudy_critiq_valid_pool.xml</asset>
                 <asset name="data">webcontent/tutorgen/skill-experimvsobs-experi_vs_obstudy_pool.xml</asset>
                 <asset name="data">webcontent/tutorgen/skill-identifybiassample-critiq_study_valid_pool.xml</asset>
-                <asset name="data">webcontent/tutorgen/skill-identifybiassample-survey_design_critiq_validity_pool.xml</as
+                <asset name="data">webcontent/tutorgen/skill-identifybiassample-survey_design_critiq_validity_pool.xml</asset>
                 <asset name="data">webcontent/tutorgen/skill-idsample-id_samp_techniq_critiq_validity_pool.xml</asset>
                 <asset name="data">webcontent/tutorgen/skill-idsample-stat_sampling_ckpt_id_samp_techniq_pool.xml</asset>
                 <asset name="data">webcontent/tutorgen/skill-idstudydesign-id_study_design_1_pool.xml</asset>
