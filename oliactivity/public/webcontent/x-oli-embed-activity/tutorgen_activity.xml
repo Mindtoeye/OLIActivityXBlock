@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE embed_activity PUBLIC "-//Carnegie Mellon University//DTD Embed 1.1//EN" "http://oli.cmu.edu/dtd/oli-embed-activity_1.0.dtd">
+<embed_activity id="tutorgen_activity" width="670" height="700" >
+    <title>Embedded Adaptive Activity</title>
+    <source>webcontent/api/oli.js</source>
+    <assets>
+            <asset name="auth">vvelsen@gmail.com:f117eeUfXNab</asset>
+                <asset name="tutorgen">5:1</asset>
+                <asset name="adaption">https://scalestudy.tutorgen.com/api/learning-systems/</asset>
+                <asset name="style">webcontent/api/oli.css</asset>
+                <asset name="problems">webcontent/tutorgen/problems.csv</asset>
+                <asset name="data">webcontent/tutorgen/skill-describesample.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-experimvsobs-experi_vs_obstudy_critiq_valid_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-experimvsobs-experi_vs_obstudy_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-identifybiassample-critiq_study_valid_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-identifybiassample-survey_design_critiq_validity_pool.xml</as
+                <asset name="data">webcontent/tutorgen/skill-idsample-id_samp_techniq_critiq_validity_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-idsample-stat_sampling_ckpt_id_samp_techniq_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-idstudydesign-id_study_design_1_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-idstudydesign-id_study_design_2_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-lurkingvar-critiq_study_valid_m2_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-lurkingvar-id_lurking_var_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-surveydesign-critiq_study_valid_m2_2_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skill-surveydesign-survey_design_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skills-studydesigndefin-id_study_design_pool.xml</asset>
+                <asset name="data">webcontent/tutorgen/skills-studydesigndefin-study_design_def_pool.xml</asset>
+                <asset name="javascript">webcontent/tutorgen/tutorgen.js</asset>
+                <asset name="layout">webcontent/tutorgen/tutorgen.html</asset>
+    </assets>
+</embed_activity>

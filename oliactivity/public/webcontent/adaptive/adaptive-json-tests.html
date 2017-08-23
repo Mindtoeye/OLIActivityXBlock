@@ -1,0 +1,62 @@
+<html>
+<head>
+
+<script>
+
+var OLIAdaptData
+{
+
+}
+var data1={
+			"current" : null,
+			"done_with_current" : true,
+			"okay" : true,
+			"done_with_course" : false,
+			"next" : 
+			{
+				"skills" : ["describesample"],
+				"pretest" : false,
+				"problem_name" : "q4_describe_samp_pop",
+				"posttest" : false,
+				"tutor_url" : "https://oli.cmu.edu/courses/course-v1:QA101/courseware/main/q4_describe_samp_pop"
+			}
+		};
+		
+/**
+*
+*/
+function parseData (aData)
+{
+	var next=null;
+
+	console.log ("parseData1 ()");
+	
+	if (aData ['next'])
+	{
+		next=aData ['next'];
+	
+		console.log ("We have a next problem: " + next ['problem_name']);
+	}
+}
+
+/**
+*
+*/
+function parseData1 ()
+{
+	parseData (data1);
+}
+
+</script>
+
+</head>
+<body>
+
+<button type="button" onclick="parseData1 ()">Parse first problem data</button> 
+
+<div id="output" style="width: 400px; height: 100px; border: 1px solid black;">
+
+</div>
+
+</body>
+</html>

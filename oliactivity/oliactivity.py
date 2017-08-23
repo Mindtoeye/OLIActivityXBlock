@@ -1,5 +1,5 @@
 """
-An XBlock providing a place to store and embed OLI activities.
+An XBlock providing a place to run and embed OLI activities.
 """
 
 import re
@@ -22,12 +22,16 @@ from xblock.fragment import Fragment
 # pylint: enable=import-error
 
 """
-An XBlock providing a place to store and embed OLI activities.
+An XBlock providing a place to store and embed OLI activities. For information and
+documentation regarding the architecture this XBlock mimics, please see the offical
+Wiki at: https://github.com/CMUOLI/OLI/wiki
 """
 class OLIActivityXBlock(XBlock):
     # pylint: disable=too-many-instance-attributes
     # All of the instance variables are required.
 
+    # Turn this off in production since it will log a lot of low level data
+    # into the edx log file
     useDebugging=True
 
     display_name = String(help="Display name of the XBlock", default="OLI Embedded Activity", scope=Scope.content)
@@ -41,9 +45,7 @@ class OLIActivityXBlock(XBlock):
     has_score = Boolean(default=True, scope=Scope.content)
     icon_class = String(default="problem", scope=Scope.content)
     score = Integer(help="Current count of correctly completed student steps", scope=Scope.user_state, default=0)
-    max_problem_steps = Integer(
-        help="Total number of steps",
-        scope=Scope.user_state, default=1)
+    max_problem_steps = Integer(help="Total number of steps",scope=Scope.user_state, default=1)
     max_possible_score = 1  # should this be 1.0?
 
     dataActivitymode=String(default="unassigned", scope=Scope.user_state)
@@ -67,8 +69,8 @@ class OLIActivityXBlock(XBlock):
     skillstring = String(help="Internal data blob used by the tracer", default="", scope=Scope.user_info)
 
     embedhtml = "public/embed.html"
-    activityxml = String (help="The relative path in content to the OLI XML that defines the activity",default="public/webcontent/x-oli-embed-activity/test02k_adobe_captivate_activity.xml",scope=Scope.user_info)
-    workbookxml = String (help="The relative path in content to the OLI XML that defines the workbook page (if any)",default="public/webcontent/x-oli-workbook_page/test02k_adobe_captivate_activity_workbook.xml",scope=Scope.user_info)
+    activityxml = String (help="The relative path in content to the OLI XML that defines the activity",default="public/webcontent/x-oli-embed-activity/tutorgen_activity.xml",scope=Scope.user_info)
+    workbookxml = String (help="The relative path in content to the OLI XML that defines the workbook page (if any)",default="",scope=Scope.user_info)
 
     activityTitle = 'Test 02b, Embedded Activities - (API Test)'
     activityClass = 'test02b_embeddedapi_class'
@@ -110,6 +112,8 @@ class OLIActivityXBlock(XBlock):
         # from a remote machine fail completely.
         return self.strip_local(self.runtime.local_resource_url(self, url))
 
+    # Allow this XBlock or any derivative to load the author provided
+    # activity XML. This method returns a pre-parsed XML object
     def loadActivityXML(self,xmlPath):
         self.olidebug ('loadActivityXML ('+xmlPath+')')
         data = self.resource_string(xmlPath)
@@ -119,18 +123,33 @@ class OLIActivityXBlock(XBlock):
         self.olidebug ('Done, returning root ...')
         return activityTree
 
+    # Allow this XBlock or any derivative to load the author provided
+    # activity XML. This method returns a string
     def loadActivityXMLAsString(self,xmlPath):
         self.olidebug ('loadActivityXMLAsString ('+xmlPath+')')
         data = self.resource_string(xmlPath)
         self.olidebug ('Data loaded, returning: ' + data)
-        return data		
+        return data
 
+    # The user or author provides and activity xml file that
+    # contains all the meta data and runtime information for
+    # that activity. In this method we parse this xml server-
+    # side so that we can populate some of the fields in the
+    # session response
+    #
+    # Makes use of: https://docs.python.org/2/library/xml.etree.elementtree.html#parsing-xml
+    #
+    #
     def processClassXML (self,root):
-        self.olidebug ('processClassXML ()')
+        self.olidebug ('processClassXML ('+root.tag+')')
         for child in root:
             print ('Tag: ' + child.tag)
 
     # **** xBlock methods ****
+
+    #
+    #
+    #
     def student_view (self, dummy_context=None):
         self.olidebug ('student_view ()')
         activityRoot=self.loadActivityXML (self.activityxml)
@@ -162,6 +181,9 @@ class OLIActivityXBlock(XBlock):
         frag.initialize_js('OLIXBlock')
         return frag
 
+    #
+    #
+    #
     @XBlock.json_handler
     def loadClientConfig (self, data, dummy_suffix=''):
         self.olidebug ('loadClientConfig ()')
@@ -178,6 +200,9 @@ class OLIActivityXBlock(XBlock):
         xmlResponse+='</super_activity_client>'
         return ({'data' : xmlResponse})
 
+    #
+    #
+    #
     @XBlock.json_handler
     def beginSession (self, data, dummy_suffix=''):
         self.olidebug ('beginSession ()')
@@ -198,10 +223,10 @@ class OLIActivityXBlock(XBlock):
         xmlResponse+='    </instructors>'
         xmlResponse+='  </section>'
         xmlResponse+='  <registration date_created="1477407995000" guid="fc60f4f40a2d9bec554c93ffd3a37668" role="instructor" section_guid="fc60f4e40a2d9bec17f7f6e6bcaea730" status="valid" user_guid="'+self.dataUserguid+'" />'
-        xmlResponse+='  <activity guid="d68e11560a2d9bec2796a69db6244535" high_stakes="false" just_in_time="false" section_guid="fc60f4e40a2d9bec17f7f6e6bcaea730">'
+        xmlResponse+='  <activity guid="'+self.dataActivityguid+'" high_stakes="false" just_in_time="false" section_guid="fc60f4e40a2d9bec17f7f6e6bcaea730">'
         xmlResponse+='     <item_info guid="d68e0eb80a2d9bec0ca250acd7a5ccf6" id="i_test02b_embeddedapi_class_038" organization_guid="d68e0e080a2d9bec60d1636e7e8c2ecd" purpose="learnbydoing" scoring_mode="default">'
         xmlResponse+='       <resource_info guid="'+self.dataActivityguid+'" id="'+self.activityClass+'" title="'+self.activityTitle+'" type="x-oli-embed-activity">'
-        xmlResponse+='         <file guid="d68e07a60a2d9bec5b9976f45af29208" href="'+activityXML+'" mime_type="text/xml" />'
+        xmlResponse+='         <file guid="'+self.dataActivityguid+'" href="'+activityXML+'" mime_type="text/xml" />'
         xmlResponse+='         <resource_files />'
         xmlResponse+='       </resource_info>'
         xmlResponse+='     </item_info>'
@@ -226,12 +251,18 @@ class OLIActivityXBlock(XBlock):
         xmlResponse+='</super_activity_session>'
         return ({'data' : xmlResponse})
 
+    #
+    #
+    #
     @XBlock.json_handler
     def loadContentFile (self, data, dummy_suffix=''):
         self.olidebug ('loadContentFile ()')
         activityXML = self.loadActivityXMLAsString (self.activityxml)
         return ({'data' : activityXML})
 
+    #
+    #
+    #
     @XBlock.json_handler
     def oli_log(self, data, dummy_suffix=''):
         self.olidebug ('oli_log ()')
@@ -256,6 +287,9 @@ class OLIActivityXBlock(XBlock):
         # pylint: enable=broad-except
         return {'result': 'success'}
 
+    #
+    #
+    #
     def studio_view(self, dummy_context=None):
         self.olidebug ('studio_view ()')
         """" Generate what is seen in the Studio view Edit dialogue. """
@@ -274,6 +308,9 @@ class OLIActivityXBlock(XBlock):
         frag.initialize_js('OLIXBlockStudio')
         return frag
 
+    #
+    #
+    #
     @staticmethod
     def validate_xml_location(url):
         """ Validate that the passed url is a CTAT tutor interface. """
@@ -281,6 +318,9 @@ class OLIActivityXBlock(XBlock):
             raise Exception('No html interface file specified.')
         return url
 
+    #
+    #
+    #
     @staticmethod
     def validate_number(num, default):
         """ Validate that the passed string is a number. """
@@ -288,6 +328,9 @@ class OLIActivityXBlock(XBlock):
             return default
         return int(num)
 
+    #
+    #
+    #
     @staticmethod
     def validate_logging(enable_logging):
         """Validate that the string is a proper value for enabling logging."""
@@ -298,6 +341,9 @@ class OLIActivityXBlock(XBlock):
                 logging = True
         return logging
 
+    #
+    #
+    #
     @XBlock.json_handler
     def studio_submit(self, data, dummy_suffix=''):
         self.olidebug ('studio_submit ()')
@@ -335,6 +381,9 @@ class OLIActivityXBlock(XBlock):
         self.logging = valid_logging
         return {'result': 'success'}
 
+    #
+    #
+    #
     @staticmethod
     def workbench_scenarios():
         self.olidebug ('workbench_scenarios ()')

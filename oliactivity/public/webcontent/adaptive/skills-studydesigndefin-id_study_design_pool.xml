@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pool id="id_study_design_pool">
+    <title>stat_design_studies_ckpt1_id_study_design_pool</title>
+    <multiple_choice id="q1_id_study_design" select="multiple">
+        <!-- LO:  -->
+        <body>
+            <p>Which of the following is an extremely important design element to have in an
+                experimental study? Check all that apply. </p>
+        </body>
+        <input shuffle="false">
+            <choice value="A">Treatments that are imposed by the experimenter</choice>
+            <choice value="B">A placebo</choice>
+            <choice value="C">Groups which are exactly the same size</choice>
+            <choice value="D">Randomized selection of participants</choice>
+        </input>
+        <part>
+            <response match="A" score="8">
+                <feedback>Incorrect. While it is true that assignment of treatment by experimenters
+                    is a key aspect of experimental studies there is at least one other important
+                    design element that you are missing. </feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. While placebos may be useful (or even essential) in some
+                    studies they may be unethical in others. Also, there is at least one correct
+                    design element. </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. While it is nice to have groups of approximately the same size,
+                    it is not important that the sizes be identical or even necessarily that close.
+                    Also, there is at least one correct design element. </feedback>
+            </response>
+            <response match="D" score="8">
+                <feedback>Incorrect. While random selection of participants is a very important
+                    aspect of experimental design there is at least one other important design
+                    element that you are missing. </feedback>
+            </response>
+            <response match="A,B" score="5">
+                <feedback>Incorrect. While it is true that assignment of treatment by experimenters
+                    is a key aspect of experimental studies, placebos are not required (and may be
+                    unethical in some studies) and there is at least one other important design
+                    element that you are missing. </feedback>
+            </response>
+            <response match="A,C" score="5">
+                <feedback>Incorrect. While it is true that assignment of treatment by experimenters
+                    is a key aspect of experimental studies, it is not essential that groups be of
+                    identical size. Also, there is at least one other important design element that
+                    you are missing. </feedback>
+            </response>
+            <response match="A,D" score="10">
+                <feedback>Correct. Randomly assigning subjects to treatments administered by
+                    researchers are two very important aspects to good experimental design.
+                </feedback>
+            </response>
+            <response match="B,C" score="0">
+                <feedback>Incorrect. Placebos are not required (and may even be unethical in some
+                    studies) and it is not essential that groups be of identical size. Also, there
+                    is at least one correct design element. </feedback>
+            </response>
+            <response match="B,D" score="5">
+                <feedback>Incorrect. While random selection of participants is a very important
+                    aspect of experimental design, placebos are not required (and may even be
+                    unethical in some studies) and there is at least one other important design
+                    element that you are missing. </feedback>
+            </response>
+            <response match="C,D" score="5">
+                <feedback>Incorrect. While random selection of participants is a very important
+                    aspect of experimental design, it is not essential that groups be of identical
+                    size and there is at least one other important design element that you are
+                    missing. </feedback>
+            </response>
+            <response match="A,B,C" score="3">
+                <feedback>Incorrect. While it is true that assignment of treatment by experimenters
+                    is a key aspect of experimental studies, placebos are not required (and may even
+                    be unethical in some studies) and it is not essential that groups be of
+                    identical size. </feedback>
+            </response>
+            <response match="A,B,D" score="8">
+                <feedback>Incorrect. While it is true that assignment of treatment by experimenters
+                    is a key aspect of experimental studies and random selection of participants is
+                    a very important aspect of experimental design, placebos are not required (and
+                    may even be unethical in some studies). </feedback>
+            </response>
+            <response match="A,C,D" score="8">
+                <feedback>Incorrect. While it is true that assignment of treatment by experimenters
+                    is a key aspect of experimental studies and random selection of participants is
+                    a very important aspect of experimental design, it is not essential that groups
+                    be of identical size. </feedback>
+            </response>
+            <response match="B,C,D" score="3">
+                <feedback>Incorrect. While random selection of participants is a very important
+                    aspect of experimental design, placebos are not required (and may even be
+                    unethical in some studies) and it is not essential that groups be of identical
+                    size. </feedback>
+            </response>
+            <response match="A,B,C,D" score="5">
+                <feedback>Incorrect. Placebos are not required (and may even be unethical in some
+                    studies) and it is not essential that groups be of identical size. </feedback>
+            </response>
+            <response match="*" score="0">
+                <feedback>Incorrect. There are important aspects of experimental design you are
+                    missing. </feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q4_id_study_design" select="single">
+        <body>In an experiment to see if aspirin reduces the chance of having a heart attack, which of the following would be a placebo?</body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The place where the subjects go when they have a heart
+                attack</choice>
+            <choice value="B">A dummy pill that looks like aspirin but has no active
+                ingredients</choice>
+            <choice value="C">A procedure for deciding who gets the aspirin treatment</choice>
+            <choice value="D">The sampling method</choice>
+            <choice value="E">The randomization procedure</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. The word <em style="italic">placebo</em> doesn&#x27;t refer to a place.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. A placebo is a nonactive treatment used in a study for proper
+                    comparison. In this case, it ensures that any comparative effect in the aspirin
+                    group is really due to the active ingredient rather than just due to the
+                    "placebo effect." </feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. A <em style="italic">placebo</em> isn&#x27;t a procedure, and it doesn&#x27;t determine who
+                    gets the treatment.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. A <em style="italic">placebo</em> isn&#x27;t a sampling method.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. A <em style="italic">placebo</em> isn&#x27;t a procedure, and it doesn&#x27;t cause
+                    randomization.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+
+
+    <multiple_choice id="q5_id_study_design" select="single">
+        <body>
+            <p>Students in a large statistics class were randomly divided into two groups. The first group took the midterm exam with soft music playing in the background, and the second group took the exam with no music playing. After the exam was completed, a researcher compared deidentified exam scores of the two groups.</p>
+            <p>Which of the following is the reason this experiment was <em style="bold">not</em> blind?</p>
+        </body>
+        <input labels="false" shuffle="true">
+            <choice value="A">The sample sizes in both groups was large.</choice>
+            <choice value="B">Researchers looked at exam scores for the two groups.</choice>
+            <choice value="C">The students knew whether or not music was playing while they were
+                taking the exam. </choice>
+            <choice value="D">Some of the students may not have studied for the exam.</choice>
+            <choice value="E">Students were randomized into the two groups.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Blinding in study design has nothing to do with the size of
+                    the samples.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. Since the researcher looked at scores without student names and
+                    conditions after the exam was complete, she was &#x201C;blind&#x201D; to which students were in
+                    each of the two conditions.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. Blinding in study design is when the subjects don&#x27;t know which
+                    treatment they&#x27;re getting. In this case, the treatments are background music or
+                    no background music. The students would certainly be aware of whether music was
+                    playing during the exam, so they would know which treatment they got.
+                </feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Blinding in study design does not refer to whether the
+                    students know the answers on the exam. It refers to whether the subjects are
+                    aware of something else pertaining to the study.</feedback>
+            </response>
+            <response match="E" score="0">
+                <feedback>Incorrect. Having two randomized groups isn&#x27;t what determines whether or
+                    not a study is blind.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

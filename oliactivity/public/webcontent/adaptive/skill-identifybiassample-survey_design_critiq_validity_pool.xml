@@ -1,0 +1,76 @@
+<pool id="survey_design_critiq_validity_pool">
+    <title>stat_sampling_ckpt_survey_design_critiq_validity_pool</title>
+    <multiple_choice id="q1_survey_design_critiq_validity">
+        <!-- LO: survey_design_critiq_validity -->
+        <body>
+            <p>When conducting a survey, which of the following is the most important reason to use a <em style="italic">random</em> sample?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">To get a significant result</choice>
+            <choice value="B">To avoid bias and to get a representative sample</choice>
+            <choice value="C">So that we can make causal conclusions</choice>
+            <choice value="D">To ensure truthful answers to the survey&#x27;s questions</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. A random sample does not guarantee a <em style="italic"
+                        >significant</em> result, it guarantees a <em style="italic"
+                        >representative</em> result. Although randomness is a necessary ingredient
+                    of any study that produces significant results, that is not the <em
+                        style="italic">most important</em> reason for random selection.</feedback>
+            </response>
+            <response match="B" score="10">
+                <feedback>Correct. <em style="italic">Random selection</em> ensures that the sample is <em style="italic">unbiased</em> on average, so that the results of the study
+                    can be generalized to the population.</feedback>
+            </response>
+            <response match="C" score="0">
+                <feedback>Incorrect. Random <em style="italic">selection</em> isn&#x27;t what allows us
+                    to determine causation; that would be ensured only by random <em style="italic"
+                        >assignment</em> to treatments.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. The truthfulness of the subjects is not affected one way or the
+                    other by the way the subjects were selected.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+  
+  <multiple_choice id="q2_survey_design_critiq_validity">
+        <!-- LO: survey_design_critiq_validity -->
+        <body>
+            <p>When conducting a survey, which of the following is the <em style="bold">most
+                    important</em> reason to avoid using a <em style="italic">volunteer</em>
+                sample?</p>
+        </body>
+        <input shuffle="true">
+            <choice value="A">You might not get a significant result.</choice>
+            <choice value="B">To ensure truthful answers to the survey&#x27;s questions.</choice>
+            <choice value="C">Your conclusions could not be reliably generalized to a larger
+                population.</choice>
+            <choice value="D">In order to get stronger opinions expressed.</choice>
+        </input>
+        <part>
+            <response match="A" score="0">
+                <feedback>Incorrect. Volunteer samples tend to contain people with a strong enough
+                    opinion on the topic to call or write in. Strong opinions in on both sides of
+                    the issue may give very significant results. However, these strong opinions may
+                    be strongly biased.</feedback>
+            </response>
+            <response match="B" score="0">
+                <feedback>Incorrect. There is no reason to assume that volunteer samples give
+                    answers that are more or less truthful than any other method.</feedback>
+            </response>
+            <response match="C" score="10">
+                <feedback>Correct. The point of sampling is to be able to generalize about a larger
+                    population and volunteer samples do not represent the population as a whole
+                    since they tend to contain people with a strong enough opinion on the topic to
+                    call or write in and therefore are a biased sample.</feedback>
+            </response>
+            <response match="D" score="0">
+                <feedback>Incorrect. Volunteer samples tend to contain responses from individuals
+                    who care the most about an issue and therefore have the strongest
+                    opinions.</feedback>
+            </response>
+        </part>
+    </multiple_choice>
+</pool>

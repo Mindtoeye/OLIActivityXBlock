@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE embed_activity PUBLIC "-//Carnegie Mellon University//DTD Embed 1.1//EN" "http://oli.cmu.edu/dtd/oli-embed-activity_1.0.dtd">
+<embed_activity id="adaptive_activity" width="670" height="700" >
+    <title>Embedded Adaptive Activity</title>
+    <source>webcontent/api/oli.js</source>
+    <assets>		
+		<asset name="adaption">https://edx-adapt-dev.raccoongang.com/api/v1</asset>
+		<asset name="style">webcontent/api/oli.css</asset>		
+		<asset name="data">webcontent/adaptive/skill-describesample.xml</asset>		
+		<asset name="data">webcontent/adaptive/skill-experimvsobs-experi_vs_obstudy_critiq_valid_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-experimvsobs-experi_vs_obstudy_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-identifybiassample-critiq_study_valid_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-identifybiassample-survey_design_critiq_validity_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-idsample-id_samp_techniq_critiq_validity_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-idsample-stat_sampling_ckpt_id_samp_techniq_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-idstudydesign-id_study_design_1_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-idstudydesign-id_study_design_2_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-lurkingvar-critiq_study_valid_m2_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-lurkingvar-id_lurking_var_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-surveydesign-critiq_study_valid_m2_2_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skill-surveydesign-survey_design_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skills-studydesigndefin-id_study_design_pool.xml</asset>
+		<asset name="data">webcontent/adaptive/skills-studydesigndefin-study_design_def_pool.xml</asset>	
+		<asset name="javascript">webcontent/api/cryptojs/sha1.js</asset>
+		<asset name="javascript">webcontent/api/cryptojs/hmac-sha1.js</asset>
+		<asset name="javascript">webcontent/api/cryptojs/md5.js</asset>
+		<asset name="javascript">webcontent/adaptive/server_interaction.js</asset>
+		<asset name="javascript">webcontent/adaptive/adaptive.js</asset>
+		<asset name="layout">webcontent/adaptive/adaptive.html</asset>
+    </assets>
+</embed_activity>
